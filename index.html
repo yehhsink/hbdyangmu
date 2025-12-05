@@ -329,7 +329,8 @@
             // NEW FEATURE: PLAY AUDIO AUTOMATICALLY
             const bgm = document.getElementById('bgm');
             bgm.volume = 0.5;
-            bgm.play().catch(e => console.log("Audio play blocked until interaction:", e));
+            bgm.play().catch(e => {
+                });
 
             // Unlock Camera
             controls.enableRotate = true;
@@ -610,4 +611,5 @@
 </body>
 
 </html>
+
 
