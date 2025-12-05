@@ -328,9 +328,13 @@
             
             // NEW FEATURE: PLAY AUDIO AUTOMATICALLY
             const bgm = document.getElementById('bgm');
+            bgm.load(); 
             bgm.volume = 0.5;
-            bgm.play().catch(e => {
-                });
+            setTimeout(() => {
+                bgm.play().catch(e => {
+                    console.warn("Audio play blocked (Autoplay Policy):", e); 
+    });
+            }, 500); 
 
             // Unlock Camera
             controls.enableRotate = true;
@@ -611,5 +615,6 @@
 </body>
 
 </html>
+
 
 
